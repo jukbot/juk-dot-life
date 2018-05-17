@@ -1,211 +1,209 @@
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Lato','Arial',sans-serif;
-    color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Lato', 'Arial', sans-serif;
+  color: #333333;
 }
 
 .w40 {
-    width: 40%;
+  width: 40%;
 }
 
 .w60 {
-    width: 60%;
+  width: 60%;
 }
 
 .w80 {
-    width: 80%;
+  width: 80%;
 }
 
 .container {
-    padding-right: 25px;
-    padding-left: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
-.cv-block{
-    font-family: 'Lato', sans-serif;
-    padding-bottom: 60px;
-    padding-top: 60px;
+.cv-block {
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
-.cv-block.block-intro{
-    text-align: center;
+.cv-block.block-intro {
+  text-align: center;
 }
 
-.cv-block.block-intro .about-me{
-    max-width: 960px;
-    margin: auto;
+.cv-block.block-intro .about-me {
+  max-width: 960px;
+  margin: auto;
 }
 
-.cv-block.block-intro p{
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 30px;
+.cv-block.block-intro p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 30px;
 }
 
 .cv-block.block-intro .btn {
   padding: 0.375rem 1rem;
   border-radius: 2rem;
- }
-
-.cv-block.block-intro .avatar{
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: auto;
-    border-radius: 100px;
-    margin-bottom: 30px;
 }
 
-.cv-block.info{
-    padding-top: 70px;
+.cv-block.block-intro .avatar {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  border-radius: 100px;
+  margin-bottom: 30px;
 }
 
-.cv-block.info h2{
-    font-weight: bold;
-    margin-bottom: 70px;
+.cv-block.info {
+  padding-top: 70px;
 }
 
-
-.cv-block.info h3{
-    font-size: 1.3rem;
+.cv-block.info h2 {
+  font-weight: bold;
+  margin-bottom: 70px;
 }
 
-.cv-block.info .group{
-    max-width: 800px;
-    margin: auto;
+.cv-block.info h3 {
+  font-size: 1.3rem;
 }
 
-.cv-block.info .group:not(:first-child){
-    margin-top: 90px;
+.cv-block.info .group {
+  max-width: 800px;
+  margin: auto;
 }
 
-.cv-block.info .group .period{
-    font-size: 1rem;
-    float: none;
-    font-weight: normal;
-    margin-top: 4px;
-    color: #999999;
-    opacity: 0.8;
+.cv-block.info .group:not(:first-child) {
+  margin-top: 90px;
 }
 
-.cv-block.info .group .organization{
-    font-size: 0.85rem;
-    background-color: palevioletred;
-    display: inline-block;
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 2rem;
+.cv-block.info .group .period {
+  font-size: 1rem;
+  float: none;
+  font-weight: normal;
+  margin-top: 4px;
+  color: #999999;
+  opacity: 0.8;
 }
 
-.cv-block.info .education.group .organization{
-    background-color: #20c997; 
+.cv-block.info .group .badge {
+  font-size: 0.85rem;
+  background-color: palevioletred;
+  display: inline-block;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 2rem;
 }
 
-.cv-block.info .group .item{
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #eee;
+.cv-block.info .education.group .badge {
+  background-color: #20c997;
 }
 
-.cv-block.info .group h2 + .item{
-    padding-top:25px;
-    border-top: 1px solid #eee;
+.cv-block.info .project.group .badge {
+  background-color: #c97a20;
 }
 
-.cv-block.info .group .item .row{
-    margin-bottom: 5px;
+.cv-block.info .group .item {
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.cv-block.info .group h2+.item {
+  padding-top: 25px;
+  border-top: 1px solid #eee;
+}
+
+.cv-block.info .group .item .row {
+  margin-bottom: 5px;
 }
 
 .cv-block.info .work-experience h3,
-.cv-block.info .education h3{
-    font-weight: bold;
+.cv-block.info .education h3 {
+  font-weight: bold;
 }
 
-.cv-block .info-card{
-    padding: 35px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.07);
-    height: 100%;
+.cv-block .info-card {
+  padding: 35px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.07);
+  height: 100%;
 }
 
-.cv-block .info-card h2{
-    margin-top: 0;
-    margin-bottom: 24px !important;
-    font-size: 1.4rem;
+.cv-block .info-card h2 {
+  margin-top: 0;
+  margin-bottom: 24px !important;
+  font-size: 1.4rem;
 }
 
-.cv-block .info-card.skills h3{
-    margin-top: 25px;
-    font-size: 1rem;
-    font-weight: bold;
+.cv-block .info-card.skills h3 {
+  margin-top: 25px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.cv-block .info-card.skills .progress{
-    height: 3px;
+.cv-block .info-card.skills .progress {
+  height: 3px;
 }
 
 .cv-block .info-card.personal-detail .row {
-    padding: 2px 0;
+  padding: 2px 0;
 }
 
 .cv-block .info-card.personal-detail .mdi {
-    font-size: 1.25rem;
-    color: #c9c9c9;
-    position: relative;
-    bottom: 3px;
+  font-size: 1.25rem;
+  color: #c9c9c9;
+  position: relative;
+  bottom: 3px;
 }
 
 .cv-block.info .hobbies {
-    text-align: center;
+  text-align: center;
 }
 
 .cv-block.info .hobbies p {
-    max-width: 960px;
-    margin: auto;
-    font-size: 1.2rem;
+  max-width: 960px;
+  margin: auto;
+  font-size: 1.2rem;
 }
 
 .cv-block.info .hobbies .btn {
-    padding: 0.375rem 1rem;
-    border-radius: 2rem;
-   }
-  
+  padding: 0.375rem 1rem;
+  border-radius: 2rem;
+}
 
 .card-body {
-    padding: 1.25rem 0;
+  padding: 1.25rem 0;
 }
 
 .cv-block .card-gap {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 div.center-container {
-    height: 65 vh;
-    display: flex;
-    align-items: center;
-    justify-content: center }
+  height: 65 vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
-  div.center-container p {
-    margin: 0 }
+div.center-container p {
+  margin: 0
+}
 
 @media (min-width: 768px) {
-
-    .cv-block {
-        padding-bottom: 120px;
-        padding-top: 120px; 
-    }
-
-    .cv-block.info .group .period {
-        float: right; 
-    }
+  .cv-block {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+  .cv-block.info .group .period {
+    float: right;
+  }
 }
 
-@media (max-width: 768px) { 
-
-
-
-}
+@media (max-width: 768px) {}
