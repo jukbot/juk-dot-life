@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Lato', 'Arial', sans-serif;
+  font-family: 'Lato', 'Arial', sans-serif;
   color: #333333;
 }
 
@@ -21,14 +21,11 @@ body {
 }
 
 .container {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding: 0 25px;
 }
 
 .cv-block {
-  font-family: 'Lato', sans-serif;
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding: 60px 0;
 }
 
 .cv-block.block-intro {
@@ -58,7 +55,7 @@ body {
   background-repeat: no-repeat;
   margin: auto;
   border-radius: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .cv-block.info {
@@ -71,11 +68,11 @@ body {
 }
 
 .cv-block.info h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 .cv-block.info .group {
-  max-width: 800px;
+  max-width: 960px;
   margin: auto;
 }
 
@@ -89,28 +86,30 @@ body {
   font-weight: normal;
   margin-top: 4px;
   color: #999999;
-  opacity: 0.8;
 }
 
 .cv-block.info .group .badge {
   font-size: 0.85rem;
-  background-color: palevioletred;
   display: inline-block;
-  color: #fff;
-  padding: 2px 8px;
+  color: #ffffff;
+  padding: 5px 10px;
   border-radius: 2rem;
+}
+
+.cv-block.info .work-experience.group .badge {
+  background-color: salmon;
 }
 
 .cv-block.info .education.group .badge {
   background-color: #20c997;
 }
 
-.cv-block.info .project.group .badge {
-  background-color: #c97a20;
+.cv-block.info .projects.group .badge {
+  background-color: #20b5c9;
 }
 
 .cv-block.info .group .item {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   margin-bottom: 25px;
   border-bottom: 1px solid #eee;
 }
@@ -137,14 +136,13 @@ body {
 
 .cv-block .info-card h2 {
   margin-top: 0;
-  margin-bottom: 24px !important;
+  margin-bottom: 10px;
   font-size: 1.4rem;
 }
 
-.cv-block .info-card.skills h3 {
-  margin-top: 25px;
+.cv-block .info-card.skills p {
+  margin-top: 20px;
   font-size: 1rem;
-  font-weight: bold;
 }
 
 .cv-block .info-card.skills .progress {
@@ -185,6 +183,24 @@ body {
   margin-bottom: 30px;
 }
 
+.cv-block.info .projects.group .project-sign {
+  width: 100%;
+  height: 250px;
+  background-color: #20b5c9;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.cv-block.info .projects.group .project-sign h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+
+}
+
 div.center-container {
   height: 65 vh;
   display: flex;
@@ -196,7 +212,11 @@ div.center-container p {
   margin: 0
 }
 
-@media (min-width: 768px) {
+/* Mobile */
+@media (max-width: 768px) {
+  .cv-block.info .projects.group .project-sign {
+    height: 180px;
+  }
   .cv-block {
     padding-bottom: 120px;
     padding-top: 120px;
@@ -205,5 +225,3 @@ div.center-container p {
     float: right;
   }
 }
-
-@media (max-width: 768px) {}
