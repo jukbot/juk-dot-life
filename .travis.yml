@@ -1,4 +1,12 @@
+language: python
+python:
+  - "3.5"
+cache: pip
+install:
+  - pip install awscli
 deploy:
+  on:
+    branch: master
   provider: s3
   detect_encoding: true
   default_text_charset: utf-8
@@ -6,4 +14,10 @@ deploy:
   secret_access_key:
     secure: IYeLD6AqkgD0nkvbf9e6Wab6783OMug9OezuEd08rv2zyJQgbjV3oGXO8h4CNPRF+vx7MfY8r8s7mkiRN7yZID+FgIkxy2pu+K6lYJ75ECh8t56SR12p9DB5+gvOTatzqjZIDgfy4ZYrjPdvAwgvQrdtmqrj+ZktCTnosRhCgFuGZ9Z/RonE9cMJ28oNTpTTVJAghnnPsJDoNONlX8R+5vn1XyU6Qj4BHwyrPV6SFrmC/77wvp4h7CRSpfUN3SEtwXH9gMssRZiTXu+evoANKc69RU5N4kfaIlHFlPNuIkzyHeN8sxcG03kP5a440Fwo0UAIfcIohRvEy8rz0l9gtag3vXLgtf0YzIQQR1xtbmrrSblMo5wWOe9HcUHLRY2MvsjEfv4pkl/nURIh654pF5ygyrWqQTjnTdAR/d186eSxRCU1RGuT4eaUJnkDtkicNsDga8I2IMV9/Ma15Hv5rP6yB6XIzKoUwCv8Vwv1ZaClGediT6FbAcCrsK5ZBuyBDcoY4oomq0tulD8jA4J7gwtZ51LNM5XVam54J3Ga1aw6U9pYn52QlsyyU0E3BK/DeNgIsdW00Gbfg5U8o9JywG1vn7X/Xs6HxylrT1Wo6SiVCp5rNGxv8LT4BB7UQplIxppZXWQXA+qOx9doSLzDdgviUH8VM5RVzVIroiOvG3E=
   bucket: arn:aws:s3:::juk.life
+  acl: public_read
   region: ap-southeast-1
+  cache_control: "max-age=21600"
+after_deploy:
+  # Allow `awscli` to make requests to CloudFront.
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id E1CHMGE9ZWKMN9 --paths "/*"
