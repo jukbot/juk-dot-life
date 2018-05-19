@@ -6,9 +6,8 @@ install:
 - pip install awscli
 deploy:
   provider: s3
-  access_key_id: AKIAI3QKAHKAHGN2I2AA
-  secret_access_key:
-    secure: DZgIqyDJ0t6ZdW3zgrGVL4pEle3SgyI77v+fh4Qv1NZY4kiV8YCfxKBYjRcVXs0MC3IjkqsmJTv1vfOyEIjCPImGpt0cb8AXvU3djwf/wAlFhUuhIiRGh9cGBOuOswfcfcl9C41q8zEq78TvqTOZGaOR+LO8954HKNKgXdD40BkjdKY+Km/EIDYKk9rFAC8oa29iO6Ei5wCiFnogJExxaK7qOqxN6IWH+rO5R5hNCQe89LSUyHXXPvueZMP08+8W6uu3/zAxU3/4+arkf69lgPy2Fn8pqs6L5WURE1P5NkhDEhH0ok8GWfkDMDRb3zKzoGOBtqKm7UxNHyLVU3kFgu6fcxpSlCPMnNYOx09GwXTleDBlJIU+PoEv4dzcqQZr9UvME0btPgRiwPEt82bXdp7K3EE6B0wo5+Nr3f70EMGy/FsFyhgZDCp+s2EqV8+jjWPULe0QLySFAtMAfhjRs2NLMLKn3HDv9mjUSJn/enloVu5rJF5jYmZULfcAiCG7cZya/LYNjBjywUTEo3Ga6wFDGcSAT8WjkK6iD7E4Xff3WXZkXJcgN9IHciQM5w5gw/0LWFRvSLGz8+dvJ3a3bkr1z7qx+QgIw5osBRwezubb5nHRfOhkMll0qRwTV1pKBGXK0dPzAOtjqWF5H5hElcOtMkfQRK5qy46HwfVKqF8=
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: juk.life
   acl: public_read
   on:
