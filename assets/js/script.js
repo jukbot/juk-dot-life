@@ -1,4 +1,4 @@
-"use_strict";
+"use strict";
 window.dataLayer = window.dataLayer || [];
 
 function gtag() {
