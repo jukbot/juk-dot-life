@@ -1,6 +1,0 @@
-# robots.txt for https://juk.life
-
-User-agent: *
-Disallow: /assets/*
-
-Sitemap: https://juk.life/sitemap.xml
