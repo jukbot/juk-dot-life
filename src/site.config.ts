@@ -4,9 +4,9 @@ export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: "Juk V. (Theme by Chris Williams)",
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: "Juk.Life",
+	title: "Juk's Life",
 	// Meta property used as the default description meta property
-	description: "An opinionated starter theme for Astro",
+	description: "Story about Juk's life",
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -19,9 +19,6 @@ export const siteConfig: SiteConfig = {
 			month: "short",
 			year: "numeric",
 		},
-	},
-	webmentions: {
-		link: "https://webmention.io/astro-cactus.chriswilliams.dev/webmention",
 	},
 };
 

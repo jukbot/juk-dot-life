@@ -32,7 +32,17 @@ export default defineConfig({
 			applyBaseStyles: false,
 		}),
 		partytown(),
-		icon(),
+		icon({
+			svgoOptions: {
+				plugins: [
+					"preset-default",
+					{
+						name: "convertColors",
+						params: { currentColor: true },
+					},
+				],
+			},
+		}),
 	],
 	output: "hybrid",
 	adapter: cloudflare(),
@@ -45,6 +55,9 @@ export default defineConfig({
 		plugins: [rawFonts([".ttf"])],
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
+		},
+		build: {
+			minify: false,
 		},
 	},
 });
