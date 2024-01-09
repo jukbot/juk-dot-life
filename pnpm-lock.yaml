@@ -23,6 +23,9 @@ dependencies:
   astro-icon:
     specifier: ^0.8.2
     version: 0.8.2
+  canvas-confetti:
+    specifier: ^1.9.2
+    version: 1.9.2
   rehype-external-links:
     specifier: ^3.0.0
     version: 3.0.0
@@ -2243,6 +2246,10 @@ packages:
 
   /caniuse-lite@1.0.30001566:
     resolution: {integrity: sha512-ggIhCsTxmITBAMmK8yZjEhCO5/47jKXPu6Dha/wuCS4JePVL+3uiDEBuhu2aIoT+bqTOR8L76Ip1ARL9xYsEJA==}
+    dev: false
+
+  /canvas-confetti@1.9.2:
+    resolution: {integrity: sha512-6Xi7aHHzKwxZsem4mCKoqP6YwUG3HamaHHAlz1hTNQPCqXhARFpSXnkC9TWlahHY5CG6hSL5XexNjxK8irVErg==}
     dev: false
 
   /ccount@2.0.1:

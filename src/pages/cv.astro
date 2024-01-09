@@ -1,0 +1,151 @@
+---
+import PageLayout from "@/layouts/Base";
+import TimeLineElement from "@/components/cv/TimeLine";
+
+const meta = {
+	title: "CV",
+	description: "View my CV",
+};
+
+// function PrintPdf(pdf) {
+// 	const document = document.documentElement;
+// 	var iframe = document.createElement("iframe");
+// 	iframe.style.display = "none";
+// 	iframe.src = pdf;
+// 	document.body.appendChild(iframe);
+// 	iframe.contentWindow.focus();
+// 	iframe.contentWindow.print();
+// }
+---
+
+<!-- <BaseLayout title="Resume" sideBarActiveItemID="cv"> -->
+<PageLayout meta={meta}>
+	<div class="mb-10 leading-6">
+		<h1 class="mb-3 w-full text-4xl font-bold">Chukkrit V. (Juk)</h1>
+		<p class="text-md">Software Engineer</p>
+		<p class="text-md">chukkrit.juk@gmail.com</p>
+		<p class="text-md">+66 86-361-3535</p>
+	</div>
+
+	<div class="mb-5">
+		<div class="w-full text-3xl font-bold">Profile</div>
+	</div>
+
+	<div class="mb-10 text-justify">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+		labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+		voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+		non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+
+	<div class="mb-5">
+		<div class="w-full text-3xl font-bold">Education</div>
+	</div>
+
+	<div class="time-line-container mb-10 grid gap-4">
+		<TimeLineElement
+			title="Title Name"
+			subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+		/>
+		<TimeLineElement
+			title="Title Name"
+			subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+		/>
+	</div>
+
+	<div class="mb-5">
+		<div class="w-full text-3xl font-bold">Experience</div>
+	</div>
+
+	<div class="time-line-container mb-10">
+		<TimeLineElement
+			title="Job Title at Project or Company Name"
+			subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+		>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+			voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+			non proident.
+		</TimeLineElement>
+		<TimeLineElement
+			title="Job Title at Project or Company Name"
+			subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+		>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+			voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+			non proident.
+		</TimeLineElement>
+		<TimeLineElement
+			title="Job Title at Project or Company Name"
+			subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+		>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+			voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+			non proident.
+		</TimeLineElement>
+	</div>
+
+	<div class="mb-5">
+		<div class="w-full text-3xl font-bold">Certifications</div>
+	</div>
+
+	<ul class="mx-6 mb-10 grid list-disc gap-2">
+		<li>
+			<a href="#" target="_blank">BigQuery for Data Warehousing</a>
+		</li>
+		<li>
+			<a href="#" target="_blank">BigQuery for Machine Learning</a>
+		</li>
+	</ul>
+
+	<div class="mb-5">
+		<div class="w-full text-3xl font-bold">Skills</div>
+	</div>
+
+	<ul class="mx-6 list-disc columns-2 md:columns-5">
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+		<li>Skill Name</li>
+	</ul>
+
+	<div class="my-12 text-center print:hidden">
+		<button
+			data-print-button
+			class="px-4 py-2 text-2xl font-bold uppercase sm:px-2 sm:py-0 sm:hover:text-textColor sm:hover:underline"
+		>
+			Download CV
+		</button>
+	</div>
+</PageLayout>
+
+<script>
+	import confetti from "canvas-confetti";
+
+	const downloadBtn = document.querySelector("[data-print-button]");
+	downloadBtn?.addEventListener("click", () => {
+		printPage();
+		confetti();
+	});
+
+	function printPage() {
+		window.print();
+	}
+</script>

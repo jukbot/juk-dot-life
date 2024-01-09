@@ -36,11 +36,11 @@ export const menuLinks: Array<{ title: string; path: string }> = [
 		path: "/about/",
 	},
 	{
-		title: "Learn",
+		title: "Blog",
 		path: "/posts/",
 	},
 	{
 		title: "Contact",
-		path: "/contact/",
+		path: "mailto:chukkrit.juk@gmail.com",
 	},
 ];
