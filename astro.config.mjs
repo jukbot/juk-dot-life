@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import cloudflare from "@astrojs/cloudflare";
 import fs from "fs";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
@@ -6,6 +7,8 @@ import sitemap from "@astrojs/sitemap";
 import remarkUnwrapImages from "remark-unwrap-images";
 import rehypeExternalLinks from "rehype-external-links";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
+import partytown from "@astrojs/partytown";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,12 +26,16 @@ export default defineConfig({
 		},
 	},
 	integrations: [
-		mdx({}),
+		mdx(),
+		sitemap(),
 		tailwind({
 			applyBaseStyles: false,
 		}),
-		sitemap(),
+		partytown(),
+		icon(),
 	],
+	output: "hybrid",
+	adapter: cloudflare(),
 	image: {
 		domains: ["webmention.io"],
 	},
@@ -42,7 +49,7 @@ export default defineConfig({
 	},
 });
 
-function rawFonts(ext: Array<string>) {
+function rawFonts(ext) {
 	return {
 		name: "vite-plugin-raw-fonts",
 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
